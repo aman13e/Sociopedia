@@ -46,14 +46,11 @@ const MyPostWidget = ({ picturePath }) => {
       formData.append("picturePath", image.name);
     }
 
-    const response = await fetch(
-      `https://sociopedia-serv.onrender.com//posts`,
-      {
-        method: "POST",
-        headers: { Authorization: `Bearer ${token}` },
-        body: formData,
-      }
-    );
+    const response = await fetch(`https://sociopedia-serv.onrender.com/posts`, {
+      method: "POST",
+      headers: { Authorization: `Bearer ${token}` },
+      body: formData,
+    });
     const posts = await response.json();
     dispatch(setPosts({ posts }));
     setImage(null);

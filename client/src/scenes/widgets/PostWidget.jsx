@@ -47,7 +47,7 @@ const PostWidget = ({
   const patchLike = async () => {
     try {
       const response = await fetch(
-        `https://sociopedia-serv.onrender.com//posts/${postId}/like`,
+        `https://sociopedia-serv.onrender.com/posts/${postId}/like`,
         {
           method: "PATCH",
           headers: {
@@ -67,7 +67,7 @@ const PostWidget = ({
   const handleComment = async () => {
     try {
       const response = await fetch(
-        `https://sociopedia-serv.onrender.com//posts/${postId}/comment`,
+        `https://sociopedia-serv.onrender.com/posts/${postId}/comment`,
         {
           method: "POST",
           headers: {
@@ -109,7 +109,7 @@ const PostWidget = ({
           height="auto"
           alt="post"
           style={{ borderRadius: "0.75rem", marginTop: "0.75rem" }}
-          src={`https://sociopedia-serv.onrender.com//assets/${picturePath}`}
+          src={`https://sociopedia-serv.onrender.com/assets/${picturePath}`}
         />
       )}
       <FlexBetween mt="0.25rem">
